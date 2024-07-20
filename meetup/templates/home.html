@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>MEETUP</h1>
+{% extends 'base.html' %}
+        
+{% block content %}
+        <h2>Groups</h2>
 
-    <h2>Groups</h2>
+        {% for group in groups %}
 
-    {% for group in groups %}
+            <div>
+                <a href="/group/{{ group.slug }}">{{ group.name }}</a>
+            </div>
 
-        <div>
-            <a href="/group/{{ group.slug }}">{{ group.name }}</a>
-        </div>
-
-    {% endfor %}
-</body>
-</html>
+        {% endfor %}
+    {% endblock %}
+    

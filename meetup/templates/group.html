@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+        
+{% block content %}
     <h1>Group: {{ group.name }}</h1>
 
     <div>
         <h2>Description</h2>
         <p>{{ group.description }}</p>
     </div>
-</body>
-</html>
+{% endblock %}
